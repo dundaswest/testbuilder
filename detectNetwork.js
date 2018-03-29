@@ -40,7 +40,7 @@ var detectNetwork = function(cardNumber) {
   	return "MasterCard";
   } else if((prefix4 === 6011 || (prefix3 >= 644 && prefix3 <= 649 )|| prefix2 === 65) && (cardLen === 16 || cardLen === 19)) {
   	return "Discover";
-  } else if((prefix4 === 5018 || prefix4 === 5020 ||prefix4 === 5038 || prefix4 === 6304) && cardLen >=12 && cardLen <= 19){
+  } else if((prefix4 === 5018 || prefix4 === 5020 ||prefix4 === 5038 || prefix4 === 6304) && cardLen >=12 && cardLen <= 19) {
   	return "Maestro";
   } else if(((prefix6 >= 622126 && prefix6 <= 622925) || (prefix3 >= 624 && prefix3 <= 626) || (prefix4 >= 6282 && prefix4 <= 6288)) 
   	&& (cardLen >= 16 && cardLen <= 19)) {
