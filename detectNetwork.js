@@ -46,7 +46,6 @@ var detectNetwork = function(cardNumber) {
   	&& (cardLen >= 16 && cardLen <= 19)) {
   		return "China UnionPay";
   	} 
-  	
 };
 
 
