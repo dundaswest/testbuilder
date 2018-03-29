@@ -149,24 +149,24 @@ describe('Discover', function() {
  var expect = chai.expect;
   // Tests without a function will be marked as "pending" and not run
   // Implement these tests (and others) and make them pass!
-  it('has a prefix of 65 and a length of 16',function(){
+  it('has a prefix of 65 and a length of 16',function() {
     expect(detectNetwork(numGenerator(65,16))).to.equal('Discover')
   })
-  it('has a prefix of 65 and a length of 19',function(){
+  it('has a prefix of 65 and a length of 19',function() {
     expect(detectNetwork(numGenerator(65,19))).to.equal('Discover')
   })
-  it('has a prefix of 6011 and a length of 16',function(){
+  it('has a prefix of 6011 and a length of 16',function() {
     expect(detectNetwork(numGenerator(6011,16))).to.equal('Discover')
   })
-  it('has a prefix of 6011 and a length of 16',function(){
+  it('has a prefix of 6011 and a length of 16',function() {
     expect(detectNetwork(numGenerator(6011,19))).to.equal('Discover')
   })
   for (var prefix = 644; prefix <= 649; prefix++) {
   (function(prefix) {
-    it('has a prefix of ' + prefix + ' and a length of 16',function(){
+    it('has a prefix of ' + prefix + ' and a length of 16',function() {
       expect(detectNetwork(numGenerator(prefix,16))).to.equal('Discover')
     });
-    it('has a prefix of ' + prefix + ' and a length of 19',function(){
+    it('has a prefix of ' + prefix + ' and a length of 19',function() {
       expect(detectNetwork(numGenerator(prefix,19))).to.equal('Discover')
   })
   
@@ -179,68 +179,68 @@ describe('Maestro', function() {
   var expect = chai.expect;
   for (var len = 12; len <= 19; len++) {
   (function(len) {
-    it('has a prefix of 5018 '+  'and a length of' + len,function(){
+    it('has a prefix of 5018 '+  'and a length of' + len,function() {
       expect(detectNetwork(numGenerator(5018,len))).to.equal('Maestro')
     });
-    it('has a prefix of 5020 '+  'and a length of' + len,function(){
+    it('has a prefix of 5020 '+  'and a length of' + len,function() {
       expect(detectNetwork(numGenerator(5020,len))).to.equal('Maestro')
     });
-    it('has a prefix of 5038 '+  'and a length of' + len,function(){
+    it('has a prefix of 5038 '+  'and a length of' + len,function() {
       expect(detectNetwork(numGenerator(5038,len))).to.equal('Maestro')
     });
-    it('has a prefix of 6304 '+  'and a length of' + len,function(){
+    it('has a prefix of 6304 '+  'and a length of' + len,function() {
       expect(detectNetwork(numGenerator(6304,len))).to.equal('Maestro')
     });
  })(len);
 }
 });
 
-describe('should support China UnionPay',function(){
+describe('should support China UnionPay',function() {
   var expect = chai.expect;
     for (var prefix = 622126; prefix <= 622925; prefix++) {
     (function(prefix) {
-    it('has a prefix of ' + prefix + ' and a length of 16',function(){
+    it('has a prefix of ' + prefix + ' and a length of 16',function() {
       expect(detectNetwork(numGenerator(prefix,16))).to.equal('China UnionPay')
     });
-    it('has a prefix of ' + prefix + ' and a length of 17',function(){
+    it('has a prefix of ' + prefix + ' and a length of 17',function() {
       expect(detectNetwork(numGenerator(prefix,17))).to.equal('China UnionPay')
     });
-    it('has a prefix of ' + prefix + ' and a length of 18',function(){
+    it('has a prefix of ' + prefix + ' and a length of 18',function() {
       expect(detectNetwork(numGenerator(prefix,18))).to.equal('China UnionPay')
     });
-    it('has a prefix of ' + prefix + ' and a length of 19',function(){
+    it('has a prefix of ' + prefix + ' and a length of 19',function() {
       expect(detectNetwork(numGenerator(prefix,19))).to.equal('China UnionPay')
     });
     })(prefix);
   }
     for (var prefix = 624; prefix <= 626; prefix++) {
     (function(prefix) {
-    it('has a prefix of ' + prefix + ' and a length of 16',function(){
+    it('has a prefix of ' + prefix + ' and a length of 16',function() {
       expect(detectNetwork(numGenerator(prefix,16))).to.equal('China UnionPay')
     });
-    it('has a prefix of ' + prefix + ' and a length of 17',function(){
+    it('has a prefix of ' + prefix + ' and a length of 17',function() {
       expect(detectNetwork(numGenerator(prefix,17))).to.equal('China UnionPay')
     });
-    it('has a prefix of ' + prefix + ' and a length of 18',function(){
+    it('has a prefix of ' + prefix + ' and a length of 18',function() {
       expect(detectNetwork(numGenerator(prefix,18))).to.equal('China UnionPay')
     });
-    it('has a prefix of ' + prefix + ' and a length of 19',function(){
+    it('has a prefix of ' + prefix + ' and a length of 19',function() {
       expect(detectNetwork(numGenerator(prefix,19))).to.equal('China UnionPay')
     });
     })(prefix);
     }
     for (var prefix = 6282; prefix <= 6288; prefix++) {
     (function(prefix) {
-    it('has a prefix of ' + prefix + ' and a length of 16',function(){
+    it('has a prefix of ' + prefix + ' and a length of 16',function() {
       expect(detectNetwork(numGenerator(prefix,16))).to.equal('China UnionPay')
     });
-    it('has a prefix of ' + prefix + ' and a length of 17',function(){
+    it('has a prefix of ' + prefix + ' and a length of 17',function() {
       expect(detectNetwork(numGenerator(prefix,17))).to.equal('China UnionPay')
     });
-    it('has a prefix of ' + prefix + ' and a length of 18',function(){
+    it('has a prefix of ' + prefix + ' and a length of 18',function() {
       expect(detectNetwork(numGenerator(prefix,18))).to.equal('China UnionPay')
     });
-    it('has a prefix of ' + prefix + ' and a length of 19',function(){
+    it('has a prefix of ' + prefix + ' and a length of 19',function() {
       expect(detectNetwork(numGenerator(prefix,19))).to.equal('China UnionPay')
     });
  })(prefix);
@@ -248,13 +248,13 @@ describe('should support China UnionPay',function(){
 })
 
 
-describe('should support Switch',function(){
+describe('should support Switch',function() {
   var expect = chai.expect;
   let prefixArr = [4903, 4905, 4911, 4936, 564182, 633110, 6333, 6759];
   for (var i = 0; i <prefixArr.length; i++) {
     let prefix = prefixArr[i];
     (function(prefix) {
-    it('has a prefix of ' + prefix + ' and a length of 16',function(){
+    it('has a prefix of ' + prefix + ' and a length of 16',function() {
       expect(detectNetwork(numGenerator(prefix,16))).to.equal('Switch')
     });
     it('has a prefix of ' + prefix + ' and a length of 18',function(){
